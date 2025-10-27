@@ -33,19 +33,19 @@ const ConstructionPage = () => {
 
       <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-4 py-12">
         {/* Hero Image */}
-        <div className="mb-8 animate-float">
+        <div className="mb-0 animate-float max-w-xl">
           <img 
             src={spaceHero} 
             alt="Pixel art space scene with astronaut and rocket" 
-            className="w-full max-w-2xl rounded-lg shadow-[0_0_50px_rgba(139,92,246,0.5)]"
+            className="w-full rounded-lg shadow-[0_0_50px_rgba(139,92,246,0.5)]"
           />
         </div>
 
         {/* Main Content */}
         <div className="text-center space-y-6 max-w-2xl">
           {/* Terminal-style text with pixelated cursor */}
-          <div className="inline-block">
-            <h1 className="text-4xl md:text-6xl font-bold mb-2 text-[hsl(var(--cyan-comet))] pixel-border px-6 py-4 bg-[hsl(var(--card))] relative font-mono">
+          <div className="block -mt-16 w-full max-w-3xl">
+            <h1 className="text-2xl md:text-4xl font-bold mb-2 text-[hsl(var(--cyan-comet))] pixel-border px-6 py-4 bg-[hsl(var(--card))] relative w-full">
               <span className="text-[hsl(var(--muted-foreground))]">&gt; </span>
               UNDER_CONSTRUCTION
               <span className="inline-block w-3 h-10 ml-2 bg-[hsl(var(--cyan-comet))] animate-[blink_1s_step-end_infinite]" style={{ imageRendering: 'pixelated' }} />
@@ -53,7 +53,7 @@ const ConstructionPage = () => {
             </h1>
           </div>
 
-          {/* Loading Bar */}
+          {/* Loading Bar
           <div className="w-full max-w-md mx-auto">
             <div className="bg-[hsl(var(--card))] p-4 pixel-border">
               <div className="flex justify-between mb-2 text-sm text-[hsl(var(--accent))]">
@@ -67,7 +67,7 @@ const ConstructionPage = () => {
                 ▸ Launching something awesome...
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Description */}
           <p className="text-lg md:text-xl text-foreground px-4">
@@ -77,7 +77,7 @@ const ConstructionPage = () => {
           </p>
 
           {/* Email Form */}
-          <form onSubmit={handleNotifyMe} className="max-w-md mx-auto">
+          {/* <form onSubmit={handleNotifyMe} className="max-w-md mx-auto">
             <div className="flex flex-col sm:flex-row gap-3 p-4 bg-[hsl(var(--card))] pixel-border">
               <Input
                 type="email"
@@ -95,7 +95,21 @@ const ConstructionPage = () => {
                 {isSubmitting ? "SENDING..." : "NOTIFY ME"}
               </Button>
             </div>
-          </form>
+          </form> */}
+
+          {/* Jobs Link */}
+          <div className="mt-8">
+            <a 
+              href="https://jobs.thethinkingpixel.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-[hsl(var(--card))] px-8 py-4 pixel-border text-[hsl(var(--cyan-comet))] hover:text-[hsl(var(--star-yellow))] hover:bg-[hsl(var(--card))]/80 transition-all duration-300 text-lg font-extrabold shadow-[0_0_30px_hsl(var(--cyan-comet)/0.5)] hover:shadow-[0_0_40px_hsl(var(--star-yellow)/0.7)] hover:scale-105"
+            >
+              <span className="text-[hsl(var(--muted-foreground))]">&gt; </span>
+              JOIN_OUR_CREW.EXE
+              <span className="ml-2 animate-pulse">→</span>
+            </a>
+          </div>
 
           {/* Pixel Art Icons */}
           <div className="flex justify-center gap-6 mt-8">
@@ -114,6 +128,7 @@ const ConstructionPage = () => {
               &gt; LOADING.AWESOME() <span className="text-[hsl(var(--star-yellow))]">⟳</span>
             </p>
           </div>
+
         </div>
       </div>
     </div>
