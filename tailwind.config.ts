@@ -100,6 +100,14 @@ export default {
           "80%": { transform: "translate(2px, -2px)" },
           "100%": { transform: "translate(0)" },
         },
+        blink: {
+          "0%, 49%": { opacity: "1" },
+          "50%, 100%": { opacity: "0" },
+        },
+        thinking: {
+          "0%, 100%": { opacity: "0.2" },
+          "50%": { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -108,6 +116,8 @@ export default {
         loading: "loading 2s ease-in-out infinite",
         float: "float 4s ease-in-out infinite",
         glitch: "glitch 0.3s ease-in-out infinite",
+        blink: "blink 1s step-end infinite",
+        thinking: "thinking 1.5s ease-in-out infinite",
       },
     },
   },

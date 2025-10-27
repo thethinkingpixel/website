@@ -43,11 +43,13 @@ const ConstructionPage = () => {
 
         {/* Main Content */}
         <div className="text-center space-y-6 max-w-2xl">
-          {/* Blinking cursor effect */}
+          {/* Terminal-style text with pixelated cursor */}
           <div className="inline-block">
-            <h1 className="text-4xl md:text-6xl font-bold mb-2 text-[hsl(var(--primary))] pixel-border px-6 py-4 bg-[hsl(var(--card))] relative">
-              UNDER CONSTRUCTION
-              <span className="inline-block w-2 h-8 ml-2 bg-[hsl(var(--primary))] animate-pulse" />
+            <h1 className="text-4xl md:text-6xl font-bold mb-2 text-[hsl(var(--cyan-comet))] pixel-border px-6 py-4 bg-[hsl(var(--card))] relative font-mono">
+              <span className="text-[hsl(var(--muted-foreground))]">&gt; </span>
+              UNDER_CONSTRUCTION
+              <span className="inline-block w-3 h-10 ml-2 bg-[hsl(var(--cyan-comet))] animate-[blink_1s_step-end_infinite]" style={{ imageRendering: 'pixelated' }} />
+              <span className="text-[hsl(var(--star-yellow))] ml-3 animate-[thinking_1.5s_ease-in-out_infinite]">...</span>
             </h1>
           </div>
 
